@@ -1,0 +1,18 @@
+{
+  "name": "logrep",
+  "version": "1.0.0",
+  "description": "Log monitoring server",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Dimitar Bonev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "linqnode": "^1.0.2",
+    "readline": "^1.2.1",
+    "tail": "^0.4.0",
+    "touch": "^1.0.0"
+  }
+}

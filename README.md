@@ -2,7 +2,7 @@
 A tiny log aggregation, transformation and streaming server
 
 
-Logrep is a very simple, yet extremely flexible tool you can use to aggregate, transform and stream via http(s) log files.
+Logrep is a very simple, yet extremely flexible tool you can use to aggregate, transform and stream log files via http(s).
 In the configuration file (example below) you specify which files you want to monitor and to which http endpoints they map, optionally, passing through handlers on their way.
 
 Configuration json file example. With this configuration, the system will start monitoring the files as specified by the 'filename' directives and will stream them to the respective endpoints:
@@ -61,3 +61,19 @@ Configuration json file example. With this configuration, the system will start 
 }
 
 ```
+
+The above file will give you the following endpoints:
+
+http://localhost:3000/
+http://localhost:3000/all
+http://localhost:3000/all_qa
+http://localhost:3000/all_dev
+http://localhost:3000/errors_warnings
+http://localhost:3000/log_load_balancer
+http://localhost:3000/log_load_balancer_qa
+http://localhost:3000/log_worker_1
+http://localhost:3000/log_worker_1_qa
+http://localhost:3000/log_worker_2
+http://localhost:3000/log_worker_2_qa
+
+Each endpoint maps to a file or a group of files, possibly transformed with handlers.

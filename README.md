@@ -64,16 +64,18 @@ Configuration json file example. With this configuration, the system will start 
 
 The above file will give you the following endpoints:
 
-http://localhost:3000/
-http://localhost:3000/all
-http://localhost:3000/all_qa
-http://localhost:3000/all_dev
-http://localhost:3000/errors_warnings
-http://localhost:3000/log_load_balancer
-http://localhost:3000/log_load_balancer_qa
-http://localhost:3000/log_worker_1
-http://localhost:3000/log_worker_1_qa
-http://localhost:3000/log_worker_2
-http://localhost:3000/log_worker_2_qa
+http://localhost:3000/  
+http://localhost:3000/all  
+http://localhost:3000/all_qa  
+http://localhost:3000/all_dev  
+http://localhost:3000/errors_warnings  
+http://localhost:3000/log_load_balancer  
+http://localhost:3000/log_load_balancer_qa  
+http://localhost:3000/log_worker_1  
+http://localhost:3000/log_worker_1_qa  
+http://localhost:3000/log_worker_2  
+http://localhost:3000/log_worker_2_qa  
 
 Each endpoint maps to a file or a group of files, possibly transformed with handlers.
+
+Each time a monitored log file is updated, the server will update its internal caches and will stream the new (potentially transformed or filtered) data to any currently attached listeners (browsers currently pointed at the respective URL).
